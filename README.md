@@ -1,5 +1,5 @@
-1. Copy "docker/.env.dist" > "docker/.env"
-2. Copy docker/docker-compose.override.local.yml > "docker-compose.override.yml"
+1. Copy "docker/.env.dist" --> "docker/.env"
+2. Copy docker/docker-compose.override.local.yml --> "docker/docker-compose.override.yml"
 3. Go to "docker" directory
 4. Run "bin/build.sh"
 5. Run "bin/up.sh"

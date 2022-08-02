@@ -1,0 +1,11 @@
+app_job_index:
+    path: /
+    controller: App\Controller\JobController::index
+
+app_job_search:
+    path: /ajax/search
+    controller: App\Controller\JobController::search
+
+app_job_detail:
+    path: /job/{job}/detail
+    controller: App\Controller\JobController::detail

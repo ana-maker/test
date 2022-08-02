@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block search_form %}
+    <div class="px-1">
+        <div class="search">
+            {{ form_start(form) }}
+            {{ form_row(form.term, {'attr': {'class': 'form-control'}}) }}
+            <button class="btn btn-primary">{{ 'Search' }}</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="card-div d-flex flex-column">
+        <h3 class="font-weight-bold">JOBS</h3>
+    </div>
+{% endblock %}
+
+{% block table_content %}
+<div id="table">
+    {% include "_job_list.html.twig" %}
+</div>
+{% endblock %}

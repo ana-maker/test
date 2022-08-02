@@ -1,0 +1,31 @@
+{% extends "_table.html.twig" %}
+
+{% block list_columns %}
+    <tr>
+        <th>{{ 'Name' }}</th>
+        <th>{{ 'Address' }}</th>
+        <th>{{ 'Education' }}</th>
+        <th>{{ 'Work' }}</th>
+        <th>{{ 'Experience' }}</th>
+    </tr>
+{% endblock %}
+
+{% block list_rows %}
+    {% for item in list %}
+        <tr>
+        <td>{{ item.name }}</td>
+        <td>
+            {{ item.address }}
+        </td>
+        <td>
+            {{ item.education }}
+        </td>
+        <td>
+            {{ item.work }}
+        </td>
+        <td>
+            {{ item.experience }}
+        </td>
+    {% endfor %}
+    </tr>
+{% endblock %}

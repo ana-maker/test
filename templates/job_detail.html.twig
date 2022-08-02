@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="card-div d-flex flex-column">
+            <h1 class="font-weight-bold">{{ 'Job page' }}</h1>
+            <h2><strong>{{ job.title }}</strong></h2>
+            <span class="d-block text-center px-3"> {{ job.company }} </span>
+        </div>
+    </div>
+{% endblock %}
+
+{% block table_content %}
+    {% include "_cv_list.html.twig" %}
+{% endblock %}

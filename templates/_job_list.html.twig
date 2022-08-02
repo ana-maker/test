@@ -1,0 +1,27 @@
+{% extends "_table.html.twig" %}
+
+{% block list_columns %}
+    <tr>
+        <th>{{ 'ID' }}</th>
+        <th>{{ 'Title' }}</th>
+        <th>{{ 'Company' }}</th>
+        <th>{{ 'Location' }}</th>
+    </tr>
+{% endblock %}
+
+{% block list_rows %}
+    {% for item in list %}
+        <tr>
+        <td>{{ item.id }}</td>
+        <td>
+            <a href="{{ path('app_job_detail', {'job': item.id}) }}" class="small-box-footer"><i class="fas fa-arrow-circle-right"></i> {{ item.title }}</a>
+        </td>
+        <td>
+            {{ item.company }}
+        </td>
+        <td>
+            {{ item.location }}
+        </td>
+    {% endfor %}
+    </tr>
+{% endblock %}
